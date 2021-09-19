@@ -11,6 +11,7 @@ export default class Main extends React.Component {
         fetch('http://www.omdbapi.com/?i=tt3896198&apikey=3594ee6d&s=panda')
             .then(response => response.json())
             .then(data => this.setState({ movie: data.Search, loading:false }))
+            
     }
     searchMovie=(str,type = 'all')=> {
         this.setState({loading:true})
